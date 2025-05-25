@@ -1,0 +1,472 @@
+:root {
+  --strong-blue: #183ff4;
+  --yellow: #ffe096;
+  --green: #93d1c1;
+  --soft-blue: #c3e0ff;
+  --pink: #f8c9e2;
+  --orange: #ef843d;
+}
+
+/* Article Style */
+
+.nav-link-placeholder a {
+  text-decoration: none;
+  color: #000;
+}
+
+.title,
+.subtitle {
+  background-color: #ccc;
+  border-radius: 6px;
+}
+
+.title {
+  height: 20px;
+  width: 300px;
+  margin: auto;
+}
+
+.subtitle {
+  height: 16px;
+  width: 150px;
+  margin: 10px auto;
+}
+
+.main-image {
+  height: 596px;
+  border-radius: 12px;
+}
+
+.main-image img {
+  width: 925px;
+  height: 488px;
+}
+
+.article p {
+  text-align: justify;
+  margin-left: -60px;
+}
+
+/* Card */
+.card-placeholder {
+  height: 100px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Right Boxes */
+.right-box {
+  background-color: #ddd;
+  height: 80px;
+  border-radius: 8px;
+}
+
+/* User Dropdown */
+.user-dropdown {
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.avatar {
+  width: 24px;
+  height: 24px;
+  background-color: #ddd;
+  border-radius: 50%;
+}
+
+.username {
+  font-size: 14px;
+  color: #333;
+}
+
+.arrow {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #aaa;
+  margin-top: 2px;
+}
+
+.custom-card-1 {
+  width: 200px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  background-color: #fefefc;
+  font-family: sans-serif;
+  position: relative;
+  margin-top: -598px;
+}
+
+.custom-card-2 {
+  width: 200px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  background-color: #fefefc;
+  font-family: sans-serif;
+  position: relative;
+}
+
+.card-image {
+  /* background-color: #d3d3d3; */
+  height: 180px;
+  position: relative;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.card-image img {
+  width: 280px;
+  height: 178px;
+}
+
+.bookmark-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: white;
+  border-radius: 50%;
+  padding: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-content {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card-content p {
+  font-size: 10px;
+  text-align: justify;
+}
+
+.line {
+  height: 10px;
+  border-radius: 8px;
+}
+
+.line-1 {
+  font-size: 10px;
+}
+
+.line-2 {
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.line-3 {
+  font-size: 11px;
+  font-weight: bold;
+}
+
+/* History Style */
+body {
+  background-color: #ffffff;
+}
+.profile-pic {
+  width: 48px;
+  height: 48px;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+}
+.history-cards,
+.saved-cards {
+  border-radius: 9px;
+  padding: 12px 15px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+.history-cards {
+  background-color: #000;
+  color: white;
+}
+.saved-cards {
+  border: 1px solid #f0f0f0;
+  color: #262832;
+}
+.highlight-box {
+  background-color: #f87c36;
+  border-radius: 25px;
+  padding: 18px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: end; /* agar gambar rata bawah */
+  color: white;
+  font-family: "Georama", sans-serif;
+  overflow: hidden; /* potong apapun yang keluar dari box */
+  height: 127px; /* sesuaikan tinggi box */
+}
+.highlight-box img {
+  padding-top: 30px;
+  width: 195px;
+  height: auto;
+  object-fit: contain;
+}
+.session-box {
+  border: 2px solid #e0e0e0;
+  border-radius: 28px;
+  padding: 20px 32px;
+}
+
+/* Saved Style */
+body {
+  background-color: #ffffff;
+}
+.profile-pic {
+  width: 48px;
+  height: 48px;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+}
+.history-card,
+.saved-card {
+  border-radius: 9px;
+  padding: 12px 15px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+.history-card {
+  border: 1px solid #f0f0f0;
+  background-color: #fff;
+  color: #262832;
+}
+.saved-card {
+  background-color: #000;
+  color: white;
+}
+.highlight-box-saved {
+  background-color: var(--green);
+  border-radius: 25px;
+  padding: 18px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: end; /* agar gambar rata bawah */
+  color: white;
+  font-family: "Georama", sans-serif;
+  overflow: hidden; /* potong apapun yang keluar dari box */
+  height: 127px; /* sesuaikan tinggi box */
+}
+.highlight-box-saved img {
+  padding-top: 30px;
+  width: 195px;
+  height: auto;
+  object-fit: contain;
+}
+.session-box {
+  border: 2px solid #e0e0e0;
+  border-radius: 28px;
+  padding: 20px 32px;
+}
+
+.card {
+  width: 290px;
+}
+
+.navbar-transparent {
+  background: #fff; /* Background transparan awal */
+  transition: background 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+.navbar-transparent.blurred {
+  background: rgba(0, 0, 0, 0.2); /* Background saat blur */
+  backdrop-filter: blur(10px); /* Efek blur */
+  -webkit-backdrop-filter: blur(
+    10px
+  ); /* Dukungan untuk browser berbasis Webkit */
+}
+
+/* ==========================================RESPONSIF============================================= */
+/* Tablet-specific styles (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Navigation Bar */
+  .nav-home {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  .nav-link-placeholder {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .user-dropdown {
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Sidebar */
+  .col-md-3 {
+    width: 30%;
+    padding: 10px;
+  }
+
+  .profile-pic {
+    width: 30px;
+    height: 30px;
+  }
+
+  .history-card,
+  .saved-card {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  /* Main Content */
+  .col-md-9 {
+    width: 70%;
+    padding: 10px;
+  }
+
+  .highlight-box-saved {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .highlight-box-saved img {
+    max-width: 150px;
+    margin-top: 10px;
+  }
+
+  /* Cards for Mindfulness Articles and Music */
+  .container.d-flex.gap-3,
+  .d-flex.flex-wrap.gap-3 {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .card {
+    width: 45% !important; /* Two cards per row on tablet */
+    max-width: 250px;
+    height: auto;
+    margin-bottom: 15px;
+  }
+
+  .card-img-top {
+    height: 130px;
+  }
+
+  .card-content {
+    padding: 10px;
+  }
+
+  .card.d-flex.flex-row {
+    width: 45% !important;
+    max-width: 250px;
+    height: auto;
+  }
+
+  .bookmark-icon {
+    font-size: 1.2rem;
+  }
+
+  /* Implement Banner */
+  .implement-banner {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.1rem;
+    text-align: center;
+  }
+}
+
+/* Base styles (to ensure consistency) */
+.nav-home {
+  background-color: rgba(255, 255, 255, 0.95);
+  transition: background-color 0.3s ease;
+}
+
+.nav-home.blurred {
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+}
+
+.profile-pic {
+  background-color: #d9d9d9;
+  border-radius: 50%;
+  background-size: cover;
+}
+
+.card {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+  object-fit: cover;
+}
+
+.bookmark-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #262832;
+  cursor: pointer;
+}
+
+.implement-banner {
+  background-color: #d1e7dd;
+  border-radius: 10px;
+  color: #0f5132;
+  margin: 10px 0;
+}
+
+.navbar-transparent {
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+}
+.hamburger {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+}
+.nav-content {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  transition: all 0.3s ease;
+}
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+  .nav-content {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .nav-content.active {
+    display: flex;
+  }
+  .nav-content .nav-link-placeholder {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .nav-content .nav-link-placeholder a {
+    margin-bottom: 10px;
+  }
+  .nav-content .user-dropdown {
+    margin-top: 10px;
+  }
+}
