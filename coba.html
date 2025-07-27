@@ -1,126 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ZenTick</title>
-    <!-- Bootstrap CSS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Navbar ZenTick</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
     <style>
-      .navbar-transparent {
-        background-color: rgba(255, 255, 255, 0.8);
-        backdrop-filter: blur(10px);
+      .navbar-brand span {
+        font-weight: bold;
       }
-      .hamburger {
-        display: none;
-        cursor: pointer;
-        font-size: 24px;
+
+      .avatar-circle {
+        width: 30px;
+        height: 30px;
+        background-color: gray;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 8px;
       }
-      .nav-content {
-        display: flex;
-        align-items: center;
-        gap: 24px;
-        transition: all 0.3s ease;
+
+      .dropdown-toggle::after {
+        margin-left: 6px;
       }
-      @media (max-width: 768px) {
-        .hamburger {
-          display: block;
-        }
-        .nav-content {
-          display: none;
-          flex-direction: column;
-          position: absolute;
-          top: 70px;
-          left: 0;
-          width: 100%;
-          background-color: rgba(255, 255, 255, 0.9);
-          padding: 20px;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .nav-content.active {
-          display: flex;
-        }
-        .nav-content .nav-link-placeholder {
-          flex-direction: column;
-          gap: 10px;
-        }
-        .nav-content .nav-link-placeholder a {
-          margin-bottom: 10px;
-        }
-        .nav-content .user-dropdown {
-          margin-top: 10px;
-        }
+
+      .user-dropdown {
+        border: 1px solid #ccc;
+        border-radius: 999px;
+        padding: 5px 10px;
+        background-color: #f8f9fa;
+      }
+
+      .navbar-nav .nav-link {
+        margin-right: 20px;
       }
     </style>
   </head>
   <body>
-    <nav
-      class="nav-home d-flex align-items-center justify-content-between px-5 py-3 position-fixed top-0 start-0 w-100 navbar-transparent"
-      style="z-index: 1000"
-    >
-      <!-- Kiri: Logo -->
-      <div class="d-flex align-items-center">
-        <div
-          class="me-2 rounded-circle"
-          style="width: 20px; height: 20px; background-color: #ef843d"
-        ></div>
-        <span class="fw-bold text-black"
-          ><a href="home.html" style="text-decoration: none; color: black"
-            >ZenTick</a
-          ></span
-        >
-      </div>
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+      <div class="container">
+        <!-- Logo Brand -->
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <span style="color: #f48120; font-size: 24px">●</span>
+          <span class="ms-2">ZenTick</span>
+        </a>
 
-      <!-- Hamburger Icon -->
-      <div class="hamburger">☰</div>
-
-      <!-- Navbar Content (Hidden on Mobile by Default) -->
-      <div class="nav-content">
-        <!-- Navigasi -->
-        <div class="nav-link-placeholder d-flex gap-4">
-          <a href="#relief" class="text-black text-decoration-none"
-            >Stress Relief Tips</a
-          >
-          <a href="#meditation" class="text-black text-decoration-none"
-            >How to Meditation</a
-          >
-          <a href="#mindfulness" class="text-black text-decoration-none"
-            >Mindfulness Article</a
-          >
+        <!-- Navbar items -->
+        <div class="collapse navbar-collapse justify-content-center">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Stress Relief Tips</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">How to Meditation</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Mindfulness Article</a>
+            </li>
+          </ul>
         </div>
 
         <!-- User Dropdown -->
-        <div
-          class="user-dropdown d-flex align-items-center px-3 py-1 border rounded-pill"
-        >
-          <div
-            class="avatar rounded-circle me-2"
-            style="width: 24px; height: 24px; background-color: grey"
-          ></div>
-          <div class="username me-2">
-            <a
-              href="article.html"
-              style="text-decoration: none"
-              class="text-black"
-              >nadabilhaqi</a
-            >
-          </div>
-          <div class="arrow text-muted" style="font-size: 12px">▾</div>
+        <div class="dropdown">
+          <button
+            class="btn user-dropdown dropdown-toggle d-flex align-items-center"
+            type="button"
+            id="dropdownUser"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <span class="avatar-circle"></span>
+            <span>abduhdzaky</span>
+          </button>
+          <ul
+            class="dropdown-menu dropdown-menu-end"
+            aria-labelledby="dropdownUser"
+          >
+            <li><a class="dropdown-item" href="#">Profil Saya</a></li>
+            <li><a class="dropdown-item" href="#">Pengaturan</a></li>
+            <li><hr class="dropdown-divider" /></li>
+            <li><a class="dropdown-item" href="#">Keluar</a></li>
+          </ul>
         </div>
       </div>
     </nav>
 
-    <!-- Bootstrap JS and Custom Script -->
+    <!-- Bootstrap 5 JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-      document
-        .querySelector(".hamburger")
-        .addEventListener("click", function () {
-          document.querySelector(".nav-content").classList.toggle("active");
-        });
-    </script>
   </body>
 </html>

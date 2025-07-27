@@ -8,17 +8,33 @@
 }
 
 /* Home Style */
+a {
+  text-decoration: none;
+  color: black;
+}
 body,
 html {
   margin: 0;
   padding: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  /* background: var(--green); */
-  min-height: 100vh;
+  font-family: "Inter", Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 200vh;
 }
 
 .nav-home {
   background-color: var(--green);
+}
+
+.user-dropdown {
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.avatar {
+  width: 24px;
+  height: 24px;
+  background-color: #ddd;
+  border-radius: 50%;
 }
 
 .curved-section {
@@ -30,9 +46,15 @@ html {
   border-bottom-right-radius: 40px;
 }
 
-.curved-section h1 {
-  margin-top: -4rem; /* atau 0 jika ingin sangat rapat */
+.curved-section .container h1 {
+  margin-top: -4rem;
 }
+z .curved-section .btn-chg:hover {
+  background-color: transparent;
+  color: var(--yellow);
+  border: 2px solid var(--yellow);
+}
+
 .container img {
   width: 300px;
   height: 300px;
@@ -42,7 +64,21 @@ html {
 }
 
 .btn-start {
-  margin-bottom: 30px;
+  background-color: white;
+  color: #4d4d4d; /* abu-abu tua */
+  font-weight: bold;
+  font-size: 20px;
+  padding: 5px 130px;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0px 6px 0px #d3d3d3; /* bayangan bawah */
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-start:active {
+  transform: translateY(3px);
+  box-shadow: 0px 3px 0px #d3d3d3;
 }
 
 .btn-chg {
@@ -55,7 +91,7 @@ html {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 90px;
+  height: 130px;
   background-color: var(--soft-blue);
   border-top-left-radius: 50% 100%;
   border-top-right-radius: 50% 100%;
@@ -64,7 +100,7 @@ html {
 .maskot-kiri,
 .maskot-kanan {
   position: absolute;
-  top: 50%; /* sejajarkan vertikal */
+  top: 100%; /* sejajarkan vertikal */
   transform: translateY(-50%);
   width: 60px;
   height: auto;
@@ -83,6 +119,10 @@ html {
   align-items: center;
   justify-content: center;
   gap: 1rem; /* jarak antar elemen */
+}
+
+.timer-wrapper h1 {
+  font-size: 6.5rem;
 }
 
 .music-player {
@@ -232,9 +272,8 @@ html {
 }
 
 .section-title {
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 30px;
+  font-size: 1.8rem;
+  margin-bottom: -10px;
   text-align: center;
 }
 
@@ -245,17 +284,49 @@ html {
   flex-wrap: wrap;
 }
 
-.feature-card {
-  width: 220px;
-  padding: 20px;
-  border-radius: 16px;
-  color: #000;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+.feature-card-1 {
+  background-color: #c6f3f1;
+  border-radius: 20px;
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  padding: 24px;
+  overflow: hidden;
+  max-width: 800px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: "Inter", sans-serif;
+  height: 180px;
+  width: 500px;
+}
+
+.feature-card-2 {
+  background-color: #c6f3f1;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+  overflow: hidden;
+  max-width: 800px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: "Inter", sans-serif;
+  height: 180px;
+  width: 500px;
+}
+
+.feature-card-3 {
+  background-color: #c6f3f1;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+  overflow: hidden;
+  max-width: 800px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: "Inter", sans-serif;
+  height: 180px;
+  width: 500px;
 }
 
 .feature-card h5 {
@@ -269,8 +340,16 @@ html {
 }
 
 .feature-card img {
-  width: 64px;
-  height: 64px;
+  width: 200px;
+  height: auto;
+  object-fit: contain;
+  margin-left: 1000px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
 .card-blue {
@@ -286,10 +365,14 @@ html {
 }
 
 .features-section {
+  display: flex;
+  flex-wrap: wrap;
   padding: 4rem 1rem;
+  gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
-  margin-top: 250px;
+  margin-top: 100px;
+  margin-left: 130px;
 }
 
 .feature-cards {
@@ -426,8 +509,8 @@ html {
 .step-number::after {
   content: "";
   position: absolute;
-  width: 6px;
-  height: 6px;
+  width: 15px;
+  height: 15px;
   background-color: gold;
   border-radius: 50%;
   bottom: -2px;
@@ -454,6 +537,17 @@ h2 {
 .subtitle {
   color: #666;
   margin-bottom: 30px;
+}
+
+/* .card-article {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+} */
+
+.card-article {
+  display: block;
 }
 
 .article-card {
@@ -506,14 +600,10 @@ h2 {
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
 }
 
-.section-title {
-  font-weight: 700;
-  font-size: 1.6rem;
-}
-
 .section-subtitle {
   color: #555;
   margin-bottom: 30px;
+  margin-top: 30px;
 }
 
 .footer-link {
@@ -597,7 +687,7 @@ h2 {
 
   .maskot-kiri,
   .maskot-kanan {
-    width: 100px;
+    width: 500px;
     height: auto;
   }
 
@@ -633,9 +723,23 @@ h2 {
     flex-direction: column;
     gap: 1rem;
   }
-
-  .feature-card img {
+  /* 
+  .feature-card-1 img {
     max-width: 100px;
+  } */
+
+  .card-article {
+    display: flex;
+    flex-wrap: nowrap; /* atau wrap kalau kamu ingin mereka turun saat overflow */
+    justify-content: center;
+    gap: 20px; /* jarak antar card */
+    padding: 20px;
+    overflow-x: auto;
+  }
+
+  .card-container {
+    flex: 0 0 auto; /* jangan biarkan card mengecil atau membesar otomatis */
+    width: 300px;
   }
 
   /* Step-by-step Meditation */
